@@ -20,10 +20,9 @@ session_start();
         </div>
         <?php 
             if(isset($_POST['filepath']) && isset($_POST['filename'])){
-            session_unset();
-            $_SESSION['filepath'] = $_POST['filepath'];
-            $_SESSION['suitename'] = $_POST['filename'];
-            //$_SESSION['casepath'] = $_POST['casepath'];
+                $_SESSION['filepath'] = $_POST['filepath'];
+                $_SESSION['suitename'] = $_POST['filename'];
+            }
         ?>
         <div id="content">
 
@@ -71,7 +70,6 @@ session_start();
 
             </div>
             </div>
-            
             
         </div>
 

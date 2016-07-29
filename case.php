@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_GET['file'])){
-            $handle = fopen($_SESSION['filepath'].$_GET['file'], "r");
+        $handle = fopen($_SESSION['filepath'].$_GET['file'], "r");
         if ($handle) {
             while (($line = fgets($handle)) !== false) {
                 if(strpos($line, '<!--') !== false){
