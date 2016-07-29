@@ -1,0 +1,88 @@
+html, body {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+    font-family: Arial;
+}
+
+p {
+    text-align: left;
+    margin: 1px 50px 1px 10px;
+}
+
+form {
+    font-size: 13px;
+    padding: 5px;
+    text-align: right;
+}
+
+#content {
+    margin: auto;
+    width: 100%;
+    display: inline-block;
+    align-content: center;
+    text-align: left;
+}
+
+#suite {
+    margin-top: 80px;
+    float: left;
+    min-height: 100%;
+    width: 200px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+#suite > table {
+    width: 200px;
+    table-layout: fixed;
+    border: 0px solid white;
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+}
+
+#casesdiv {
+    padding-top: 30px;
+    margin: auto;
+    margin-top: 80px;
+    max-width: 600px;
+    width: auto;
+    float: left;
+    text-align: left;
+}
+
+#casesdiv > table {
+    width: 600px;
+    table-layout: fixed;
+    border: 0px solid white;
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
+    padding-left: 50px;
+    word-wrap: break-word;
+}
+
+#cname {
+    width: 810px;
+    table-layout: fixed;
+    border: 0px solid white;
+    border-collapse: collapse;
+    border-bottom: 1px solid black;
+    margin-top: 80px;
+    padding-left: 50px;
+    word-wrap: break-word;
+    position: fixed;
+    background-color: white;
+}
+
+#top {
+    width: 810px;
+    border-top: 30px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    word-wrap: break-word;
+    position: fixed;
+    background-color: white;
+}
+
