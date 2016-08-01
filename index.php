@@ -10,13 +10,13 @@ session_start();
     </head>
     <body>
         <div id="top">
-        <form action="index.php" method="post" enctype="multipart/form-data" id="opensuite">
-            <label>Suite path(with root, ex.: C:/suite/)</label>
-            <input type="text" name="filepath" id="filepath"><br/>
-            <label>Suite name(with extension, ex.: suite.html)</label>
-            <input type="text" name="filename" id="filename"><br/>
-            <input type="submit" value="Select Suite" name="submit">
-        </form>
+            <form action="index.php" method="post" enctype="multipart/form-data" id="opensuite">
+                <label>Suite path(with root, ex.: C:/suite/)</label>
+                <input type="text" name="filepath" id="filepath"><br/>
+                <label>Suite name(with extension, ex.: suite.html)</label>
+                <input type="text" name="filename" id="filename"><br/>
+                <input type="submit" value="Select Suite" name="submit">
+            </form>
         </div>
         <?php 
             if(isset($_POST['filepath']) && isset($_POST['filename'])){
@@ -28,47 +28,46 @@ session_start();
 
             <div id="suite">
             
-            <?php
-                $handle = fopen($_SESSION['filepath'].$_SESSION['suitename'], "r");
-                if ($handle) {
-                    while (($line = fgets($handle)) !== false) {
-                        if(strpos($line, 'href=') !== false){
-                            $cases = explode("\"", $line);
-                            $casename = explode(">", $cases[2]);
-                            echo "<tr><td><p onclick=\"cases('".$cases[1]."')\">".$casename[1]."</p></td></tr>";
-                        }else{
-                            echo $line;
+                <?php
+                    $handle = fopen($_SESSION['filepath'].$_SESSION['suitename'], "r");
+                    if ($handle) {
+                        while (($line = fgets($handle)) !== false) {
+                            if(strpos($line, 'href=') !== false){
+                                $cases = explode("\"", $line);
+                                $casename = explode(">", $cases[2]);
+                                echo "<tr><td><p onclick=\"cases('".$cases[1]."')\">".$casename[1]."</p></td></tr>";
+                            }else{
+                                echo $line;
+                            }
                         }
+                        fclose($handle);
                     }
-                    fclose($handle);
-                }
-            ?>
+                ?>
             
             </div>
             
-            <?php } ?>
             <div id="selenium">
 
-            <table id="cname">
-                <tr>
-                    <td>
-                        <p id="cnametext"></p>
-                    </td>
-                    <td>
-                        <p id="cnametext">Command</p>
-                    </td>
-                    <td>
-                        <p id="cnametext">Target</p>
-                    </td>
-                    <td>
-                        <p id="cnametext">Value</p>
-                    </td>
-                </tr>
-            </table>
+                <table id="cname">
+                    <tr>
+                        <td>
+                            <p id="cnametext"></p>
+                        </td>
+                        <td>
+                            <p id="cnametext">Command</p>
+                        </td>
+                        <td>
+                            <p id="cnametext">Target</p>
+                        </td>
+                        <td>
+                            <p id="cnametext">Value</p>
+                        </td>
+                    </tr>
+                </table>
 
-            <div id="casesdiv">
+                <div id="casesdiv">
 
-            </div>
+                </div>
             </div>
             
         </div>
