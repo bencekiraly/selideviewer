@@ -10,13 +10,15 @@ session_start();
     </head>
     <body>
         <div id="top">
-            <form action="index.php" method="post" enctype="multipart/form-data" id="opensuite">
-                <label>Suite path(with root, ex.: C:/suite/)</label>
-                <input type="text" name="filepath" id="filepath"><br/>
-                <label>Suite name(with extension, ex.: suite.html)</label>
-                <input type="text" name="filename" id="filename"><br/>
-                <input type="submit" value="Select Suite" name="submit">
-            </form>
+            <div id="formdiv">
+                <form action="index.php" method="post" enctype="multipart/form-data" id="opensuite" >
+                    <label>Suite path(with root, ex.: C:/suite/)</label>
+                    <input type="text" name="filepath" id="filepath"><br/>
+                    <label>Suite name(with extension, ex.: suite.html)</label>
+                    <input type="text" name="filename" id="filename"><br/>
+                    <input type="submit" value="Select Suite" name="submit">
+                </form>
+            </div>
         </div>
         <?php 
             if(isset($_POST['filepath']) && isset($_POST['filename'])){
@@ -51,16 +53,16 @@ session_start();
                 <table id="cname">
                     <tr>
                         <td>
-                            <p id="cnametext"></p>
+                            <p id="cnamesuite"><?php if(isset($_SESSION['suitename'])){echo $_SESSION['suitename'];}?></p>
                         </td>
                         <td>
-                            <p id="cnametext">Command</p>
+                            <p>Command</p>
                         </td>
                         <td>
-                            <p id="cnametext">Target</p>
+                            <p>Target</p>
                         </td>
                         <td>
-                            <p id="cnametext">Value</p>
+                            <p>Value</p>
                         </td>
                     </tr>
                 </table>

@@ -86,3 +86,7 @@ form {
     background-color: white;
 }
 
+#cnamesuite{
+    font-weight: bold;
+    color: blue;
+}
