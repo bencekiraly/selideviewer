@@ -88,7 +88,12 @@ form {
     background-color: white;
 }
 
-#cnamesuite{
+#cnamesuite {
     font-weight: bold;
     color: blue;
+    cursor: text;
+}
+
+.cnames {
+    cursor: text;
 }

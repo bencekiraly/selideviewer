@@ -56,13 +56,13 @@ session_start();
                             <p id="cnamesuite"><?php if(isset($_SESSION['suitename'])){echo $_SESSION['suitename'];}?></p>
                         </td>
                         <td>
-                            <p>Command</p>
+                            <p><p class="cnames">Command</p>
                         </td>
                         <td>
-                            <p>Target</p>
+                            <p class="cnames">Target</p>
                         </td>
                         <td>
-                            <p>Value</p>
+                            <p class="cnames">Value</p>
                         </td>
                     </tr>
                 </table>
